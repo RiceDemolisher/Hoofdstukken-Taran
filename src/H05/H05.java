@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.applet.*;
 
-public class H051 extends Applet {
+public class H05 extends Applet {
 
     public void init() {
 

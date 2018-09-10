@@ -20,7 +20,7 @@ public class H062 extends Applet {
         b = 60;
         c = 24;
         d = 30;
-        e = 365;
+        e = 12;
         Secondenineenuur = a*b;
         Secondenineendag = Secondenineenuur*c;
         Secondenineenmaand = Secondenineendag*d;

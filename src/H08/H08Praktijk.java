@@ -20,7 +20,7 @@ public class H08Praktijk extends Applet {
         knopplus = new Button("+");
         knopplus.addActionListener( new KnopplusListener());
         knopmin = new Button("-");
-       knopmin.addActionListener( new KnopminListener());
+        knopmin.addActionListener( new KnopminListener());
         knopdeel = new Button("/");
         knopdeel.addActionListener( new KnopdeelListener());
         add(label);

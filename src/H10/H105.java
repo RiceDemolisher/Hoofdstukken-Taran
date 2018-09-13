@@ -4,54 +4,48 @@ import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 
-public class H102 extends Applet {
+public class H105 extends Applet {
     TextField tekstvak;
-    Label label, label1;
+    Label label;
     String s, tekst;
-    int Getal, Getal1, Getal2=1000000000;
+    Button knop;
+    int Getal;
+    int Getal1;
 
     public void init() {
         tekstvak = new TextField("", 20);
-        label = new Label("Type Getal:");
+        knop = new Button("Gemiddelde");
+        //knop.addActionListener(new KnopListener());
+        label = new Label("Type Cijfer:");
         tekstvak.addActionListener(new TekstvakListener());
         tekst = "";
         add(label);
+        add(knop);
         add(tekstvak);
     }
 
     public void paint(Graphics g) {
-        g.drawString("Grooste Getal: " + Getal1, 50, 60);
-        g.drawString("Kleinste Getal: " + Getal2, 50, 80);
+        g.drawString("" + Getal1 + tekst, 50, 60);
     }
 
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             s = tekstvak.getText();
             Getal = Integer.parseInt(s);
-            if (Getal > Getal1) {
-                Getal1 = Getal;
+            Getal1 = Getal;
+            if (Getal > 6) {
+                tekst = " Voldoende";
                 repaint();
             }
-            if (Getal < Getal2) {
-                Getal2 = Getal;
+            else {
+                tekst = " Onvoldoende";
                 repaint();
             }
+
+
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
